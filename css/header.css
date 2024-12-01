@@ -1,0 +1,55 @@
+
+#header {
+  box-sizing: border-box;
+  width: 100vw;
+  background: #ddd;
+  position: sticky; top: 0;
+  display: flex;
+  justify-content: flex-end;
+  user-select: none;
+  padding: 0 2em;
+}
+
+#header > .icon {
+  margin-right: auto;
+}
+
+#header > .icon > img {
+  height: 5em;
+}
+
+#header > * {
+  margin: auto 1em;
+  cursor: pointer;
+}
+
+#header > a {
+  color: #222;
+  font-family: "Walter Turncoat", cursive;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+#header > .item {
+  border-bottom: solid rgba(20, 20, 20, 0);
+  transition-duration: 0.5s;
+}
+
+#header > .item > img {
+  height: 1em;
+}
+
+#header > .item:hover {
+  border-bottom: solid rgba(20, 20, 20, 1);
+}
+
+/*
+header > div > * >  img {
+  height: 2em;
+  margin: .7em 0;
+}
+
+header > div > a > div {
+  padding-top: .4em;
+}
+*/

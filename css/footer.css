@@ -1,0 +1,36 @@
+
+#footer {
+	background: #222;
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: 1fr auto;
+	
+	color: #ddd;
+}
+
+#footer > .links {
+	margin: 1em;
+	font-size: 2em;
+}
+
+#footer > .links > * {
+	margin-right: .6em;
+}
+
+#footer > .logo {
+	height: 4em;
+	margin: 1em;
+}
+
+#footer > .copyright {
+	color: #ddd;
+	font-size: 1em;
+	font-family: 'Walter Turncoat';
+	margin: auto;
+	margin-bottom: 1em;
+	margin-right: 1em;
+}
+
+
+
+
