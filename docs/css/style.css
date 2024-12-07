@@ -1,0 +1,40 @@
+/**** basic style ****/
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Pixelify+Sans:wght@500&family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Pixelify+Sans:wght@500&family=Walter+Turncoat&family=Yomogi&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+	background: #eee;
+  color: #222;
+  
+  width: 100vw;
+  height: 100vh;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+/**** screen style ****/
+.screen {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+#main_screen {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+	

@@ -1,0 +1,155 @@
+/*
+  header
+  > a(logo)
+    > img
+  > input(for accordion)
+  > label(humberger)
+    > bar
+    > bar
+    > bar
+    > div(bg)
+  > nav(items)
+    > a
+    > a
+    ...
+    > a
+*/
+
+/**** mini size window :  ****/
+@media screen and (max-width: 600px) {
+  #header {
+    
+  }
+}
+
+/**** big size window : ****/
+@media screen and (min-width: 600px) {
+  #header {
+    
+  }
+}
+
+/**** logo style ****/
+/**** #header > .logo > img ****/
+#header > .humburger > .bg { position: relative; z-index: 0; }
+#header {
+  box-sizing: border-box;
+  width: 100%;
+  background: #ddd;
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  user-select: none;
+  padding: 1em 2em;
+  color: #222;
+  font-family: "Walter Turncoat", cursive;
+}
+
+#header > .logo {
+  margin-right: auto;
+}
+
+#header > .logo > img {
+  height: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  #header  {
+     padding: 2em 2em;
+  }
+  #header > .logo > img {
+    height: 3em;
+  }
+}
+
+
+
+/**** humburger part ****/
+#header > #humburger { display: none; }
+#header > .humburger > .bar {
+  width: 3em;
+  height: .5em;
+  margin: .5em 0;
+  background-color: #424242;
+  border-radius: 10em;
+}
+#header > .humburger > .bg {
+  width:  100vw;
+  height: 100vh;
+  background: #424242;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0; pointer-events: none;
+  transition: opacity .5s;
+}
+
+/* animation setting */
+#header > .humburger > .bar { transition-duration: .5s; }
+#header > #humburger:checked ~ .humburger > .bar:nth-child(1) {
+  transform: translateY(1em) rotate(-45deg) ; }
+#header > #humburger:checked ~ .humburger > .bar:nth-child(2) {
+  transform: translateX(40%); opacity: 0; }
+#header > #humburger:checked ~ .humburger > .bar:nth-child(3) {
+  transform: translateY(-1em) rotate(45deg); }
+#header > #humburger:checked ~ .humburger > .bg {
+  opacity: 0.5; pointer-events: auto;
+}
+
+
+@media screen and (min-width: 600px) {
+  /* big size window */
+  #header > .humburger {
+    display: none;
+  }
+}
+
+
+
+/*** nav style ***/
+#header > .nav {
+  position: absolute;
+  width: 100%;
+  top: 100%; left: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  background: #ddd;
+  margin: 0;
+  opacity: 0; pointer-events: none;
+  transition: opacity .5s;
+}
+
+#header > .nav > .item {
+  padding: .4em 2em;
+  border-bottom: solid;
+  border-color: rgba(42, 42, 42, 0);
+  transition: border-color .5s;
+}
+
+#header > .nav > .item:hover {
+  border-color: rgba(42, 42, 42, 1);
+}
+
+#header > #humburger:checked ~ .nav {
+  opacity: 1; pointer-events: auto;
+}
+
+
+/* nav style */
+@media screen and (min-width: 600px) {
+  /* big size window */
+  #header > .nav {
+    position: relative;
+    top: 0;
+    width: auto;
+    flex-direction: row;
+    background: #ddd;
+    opacity: 1;
+    font-size: 1.2em;
+    pointer-events: auto;
+  }
+  #header > .nav > .item {
+    padding: 0;
+    margin: auto 1em;
+  }
+}
