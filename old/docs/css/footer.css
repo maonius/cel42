@@ -6,6 +6,7 @@
 	grid-template-columns: 1fr auto;
 	
 	color: #ddd;
+	height: 256px;
 }
 
 #footer > .links {
