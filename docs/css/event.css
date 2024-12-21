@@ -1,0 +1,74 @@
+#schedule > .article {
+	display: grid;
+	grid-template:
+		"icon type date" auto
+		"icon title title" auto
+		"none detail detail" auto /
+		auto auto 1fr;
+	padding-bottom: .4em;
+	border-bottom: solid 1px #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  #schedule > .article {
+    font-size: 1.2em;
+  }
+}
+
+/* grid-area */
+#schedule > .article > .icon   { grid-area: icon; }
+#schedule > .article > .type   { grid-area: type; }
+#schedule > .article > .date   { grid-area: date; }
+#schedule > .article > .title  { grid-area: title; }
+#schedule > .article > .detail { grid-area: detail; }
+
+/* setting for input */
+#schedule > .article > .checkbox {
+	 display: none;
+}
+
+/* setting for icon */
+#schedule > .article > .icon {
+	height: 4em;
+	margin: .4em;
+}	
+
+/* setting for type */
+#schedule > .article > .type {
+	margin: auto;
+	padding: 0;
+	font-size: 1.2em;
+	width: 4em;
+	text-align: center;
+	border-radius: .3em;
+	color: #eee;
+	font-family: "Walter Turncoat", cursive;
+}
+
+/* theme color setting */
+#schedule > .article.live  > .type { background: #c42; }
+#schedule > .article.event > .type { background: #24c; }
+
+/* setting for date */
+#schedule > .article > .date {
+	margin: auto;
+	margin-left: 1em;
+	padding: 0;
+	font-size: 1em;
+	font-family: "Walter Turncoat", cursive;
+}
+
+/* setting for title */
+
+/* setting for detail */
+#schedule > .article > .detail {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height .5s;
+}
+
+#schedule > .article > .checkbox:checked ~ .detail {
+	max-height: 100%;
+}
+
+

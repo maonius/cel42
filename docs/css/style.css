@@ -31,10 +31,6 @@ a {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-}
-
-#main_screen {
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+	overscroll-behavior-y: none;
 }
 	

@@ -1,0 +1,9 @@
+.square_news {
+	display: flex;
+}
+
+.square_news > img {
+	height: 8em;
+	padding: 1em;
+	margin: 1em auto;
+}

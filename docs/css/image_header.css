@@ -1,0 +1,19 @@
+#image_header {
+	text-align: center;
+	position: relative;
+	margin-bottom: 128px;
+}
+
+#image_header > .header_img {
+	width: 100vw;
+}
+
+#image_header > .top_logo {
+	height: 256px;
+	position: absolute;
+	left: 0; right: 0;
+	margin: 0 auto;
+	bottom: 0;
+	transform: translateY(50%);
+}
+
